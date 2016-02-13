@@ -19,7 +19,7 @@ def txt_records_for_name(name):
     """
     try:
         dns_response = dns.resolver.query(name, 'TXT')
-    except dns.exception.NXDOMAIN as error:
+    except dns.resolver.NXDOMAIN as error:
         return []
     except dns.exception.DNSException as error:
         logger.error("Error resolving %s: %s", name, str(error))
