@@ -26,6 +26,5 @@ def txt_records_for_name(name):
         logger.error("Error resolving %s: %s", name, str(error))
         return []
 
-    responses = [strings for rdata in dns_response]
     return [txt_rec.decode("utf-8") for rdata in dns_response
                                     for txt_rec in rdata.strings]
