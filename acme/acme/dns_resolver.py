@@ -27,4 +27,4 @@ def txt_records_for_name(name):
         return []
 
     return [txt_rec.decode("utf-8") for rdata in dns_response
-                                    for txt_rec in rdata.strings]
+            for txt_rec in rdata.strings]
