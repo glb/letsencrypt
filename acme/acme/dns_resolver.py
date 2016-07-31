@@ -25,4 +25,4 @@ def txt_records_for_name(name):
     except dns.exception.DNSException as error:
         logger.error("Error resolving %s: %s", name, str(error))
         return []
-    return [txt_rec for rdata in dns_response for txt_rec in rdata.strings]
+    return [txt_rec for rdata in dns_response]
